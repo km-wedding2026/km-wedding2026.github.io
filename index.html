@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ślub Kornelii i Marcina</title>
+    <link rel="shortcut icon" type="image/png" href="img/image.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--
+    background: url('https://fastly.picsum.photos/id/12/2500/1667.jpg?hmac=Pe3284luVre9ZqNzv1jMFpLihFI6lwq7TPgMSsNXw2w') no-repeat center center/cover;
+    background: url('angelo.jpg') no-repeat center center/cover;
+    background: url('turkey_hill.jpg') no-repeat center center/cover;
+    background: url('arbellobello.jpg') no-repeat center center/cover;
+    -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            position: relative;
+            background: url('img/dlonie.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
+            font-weight: bold;
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+        }
+        .divider {
+            width: 100px;
+            height: 3px;
+            background-color: #333;
+            margin: 0.5rem auto;
+        }
+        .font-some {
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+        }
+        .gallery img {
+            border-radius: 8px;
+        }
+        .test-font-change {
+            font-family: "Great Vibes", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .scrolled {
+            background-color: black;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .top {
+            background-color: transparent;
+            background: rgba(0, 0, 0, 0.0);
+        }
+        .nav-link {
+            color: white;
+            font-family: "Playfair Display", serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+        .timeline-bg {
+            background: rgba(236, 236, 236, 0.9);
+        }
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+        }
+        ul.timeline:before {
+            content: ' ';
+            background: #d4d9df;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+        }
+        ul.timeline > li {
+            text-align: start;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        ul.timeline > li:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #000000;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+        }
+        .gray-img {
+            filter: grayscale(100%) contrast(150%);
+        }
+        .height-35 {
+            height: 35vh;
+            max-height: 35vh;
+            display: flex;
+        }
+        .background-image {
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            z-index: -10; /* Push the image behind */
+            object-fit: cover; /* Ensure the image covers the background area */
+            opacity: 0.7;
+        }
+        .background-image2 {
+            position: absolute;
+            right: 0px;
+            top: 450px;
+            z-index: -10; /* Push the image behind */
+            object-fit: cover; /* Ensure the image covers the background area */
+            opacity: 0.7;
+        }
+        .background-image3 {
+            position: absolute;
+            left: 0px;
+            top: 850px;
+            z-index: -10; /* Push the image behind */
+            object-fit: cover; /* Ensure the image covers the background area */
+            opacity: 0.7;
+        }
+        .background-image4 {
+            position: absolute;
+            right: 0px;
+            top: 1250px;
+            z-index: -99999999; /* Push the image behind */
+            object-fit: cover; /* Ensure the image covers the background area */
+            opacity: 0.7;
+        }
+        .background-image5 {
+            position: absolute;
+            left: 0px;
+            top: 200px;
+            z-index: -10; /* Push the image behind */
+            object-fit: cover; /* Ensure the image covers the background area */
+            opacity: 0.7;
+        }
+        .background-image6 {
+            position: absolute;
+            right: 0px;
+            top: 200px;
+            z-index: -10; /* Push the image behind */
+            object-fit: cover; /* Ensure the image covers the background area */
+            opacity: 0.7;
+        }
+        .content-timeline {
+            position: relative;
+            z-index: 2;
+        }
+        .test {
+            position: relative;
+            z-index: 2;
+        }
+        .accordion-button:not(.collapsed) {
+            color: white;
+            background-color: rgb(29, 29, 29);
+            --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+        }
+        .accordion {
+            --bs-accordion-btn-focus-border-color: transparent;
+            --bs-accordion-btn-focus-box-shadow: transparent;
+        }
+        .web-page-link {
+            text-decoration: underline;
+            color: black;
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        .my-img{
+            position:relative;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('img/selfie_bg.jpg');
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="ID1">
+        <div class="container">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <!-- <i class="bi bi-three-dots"></i> -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                </svg> -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-auto d-flex">
+                  <!-- Left-aligned items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#header">"DOMEK"</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ourStory">Nasza Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location">Miejsce Imprezy</a>
+                    </li>
+
+                  <!-- Center-aligned item
+                  <li class="navbar-brand ms-auto me-auto">
+                    <a class="navbar-brand" href="#">Kornelia & Marcin</a>
+                  </li> -->
+
+                  <!-- Right-aligned items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Co się wydarzy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rsvp">RSVP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQs</a>
+                    </li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container test-font-change">
+            <h1 class="display-1">Kornelia & Marcin</h1>
+            <!-- <p>Join us in celebrating our love</p>
+            <p>Data: 29 Maj 2026</p> -->
+            <div class="d-flex justify-content-center gap-3">
+                <div>
+                    <h3 id="days" class="fw-bold display-6">00</h3>
+                    <p>Dni</p>
+                </div>
+                <div>
+                    <h3 id="hours" class="fw-bold display-6">00</h3>
+                    <p>Godzin</p>
+                </div>
+                <div>
+                    <h3 id="minutes" class="fw-bold display-6">00</h3>
+                    <p>Minut</p>
+                </div>
+                <div>
+                    <h3 id="seconds" class="fw-bold display-6">00</h3>
+                    <p>Sekund</p>
+                </div>
+            </div>
+            <a class="mt-4 pe-3 btn btn-outline-light rsvp-btn" href="#rsvp" role="button">R S V P </a>
+        </div>
+    </header>
+
+    <!-- Our story Section -->
+    <section id="ourStory" class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="section-title">Nasza Historia</h2>
+            <div class="divider"></div>
+            <p>It all began with a smile... and the rest is history. John and Jane met under the most serendipitous of circumstances, and their love story has been a magical journey ever since.</p>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-5" style="background: url('pattern.avif') no-repeat center center/cover;">
+        <div class="container text-center">
+            <h2 class="section-title">Miejsce imprezy</h2>
+            <div class="divider"></div>
+            <div class="row align-items-center pt-5">
+                <!-- Text Column -->
+                <div class="col-md-6 text-center font-some">
+                    <h2 class="fw-bold">Ślub</h2>
+                    <p class="fs-4">14:00, 29.05.2026</p>
+                    <p class="mb-1">Kościół Rzymskokatolicki i Sanktuarium Przemienienia Pańskiego</p>
+                    <p class="mb-1">Cmolas 252A</p>
+                    <p>36-105 Cmolas</p>
+                </div>
+                <!-- Image Column -->
+                <div class="col-md-6">
+                    <img src="img/cmolas2.jpg" alt="Ceremony Image" class="img-fluid rounded shadow-lg mx-auto d-block height-35">
+                </div>
+                <div class="col-12 p-2"></div>
+                <!-- Image Column -->
+                <div class="col-md-6 height-35">
+                    <img src="img/oranzeria.jpg" alt="Ceremony Image" class="img-fluid rounded shadow-lg">
+                </div>
+                <!-- Text Column -->
+                <div class="col-md-6 text-center font-some">
+                    <h2 class="fw-bold">Wesele</h2>
+                    <p class="fs-4">15:30, 29.05.2026</p>
+                    <p class="mb-1">Oranżeria Przyjęcia</p>
+                    <p class="mb-1">Komorów 321</p>
+                    <p>36-110 Komorów</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <img src="./rose2.png" alt="Responsive image"> -->
+
+    <section id="timeline" class="py-5 bg-light test">
+        <div class="container text-center ">
+            <h2 class="section-title">Co się wydarzy</h2>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-md-8 col-lg-6 offset-lg-3 offset-md-2 timeline-bg rounded">
+                    <ul class="timeline rounded pt-3 font-some">
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Kościół</h5>
+                                <span class="ms-auto d-inline pe-4">14:00 - 15:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Kościół</h5>
+                                <span class="ms-auto d-inline pe-4">15:30 - 15:45</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Składanie życzeń</h5>
+                                <span class="ms-auto d-inline pe-4">15:45 - 16:30</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Obiad</h5>
+                                <span class="ms-auto d-inline pe-4">16:30 - 17:15</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Pierwszy taniec oraz rozpoczęcie imprezy</h5>
+                                <span class="ms-auto d-inline pe-4">17:20</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Kolacja I</h5>
+                                <span class="ms-auto d-inline pe-4">20:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Kolacja II</h5>
+                                <span class="ms-auto d-inline pe-4">22:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Oczepiny</h5>
+                                <span class="ms-auto d-inline pe-4">00:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Kolacja III</h5>
+                                <span class="ms-auto d-inline pe-4">1:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Transport I</h5>
+                                <span class="ms-auto d-inline pe-4">1:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Transport II</h5>
+                                <span class="ms-auto d-inline pe-4">2:30</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                        <li>
+                            <div class="d-flex">
+                                <h5 class="d-inline me-auto">Transport III</h5>
+                                <span class="ms-auto d-inline pe-4">4:00</span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img src="img/rose.png" alt="Responsive image" class="background-image">
+            <img src="img/rose2.png" alt="Responsive image" class="background-image2">
+            <img src="img/rose.png" alt="Responsive image" class="background-image3">
+            <img src="img/rose2.png" alt="Responsive image" class="background-image4">
+        </div>
+    </section>
+
+    <!-- Google Form Section -->
+    <section id="rsvp" class="py-5 bg-light" style="background: url('pattern.avif') no-repeat center center/cover;">
+        <div class="container">
+            <h2 class="section-title text-center">RSVP</h2>
+            <div class="divider"></div>
+            <p class="text-center font-some">Prosze potwierdź swoją obecność poniższym formularzem lub skontaktujcie się z Nami :)</p>
+            <div class="row justify-content-center">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexR70B2reoB-zBQGz-h9vnH1iDye8QPRWlok99-aU4_kvp_A/viewform?embedded=true" height="1290" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light test">
+        <img src="img/rose.png" alt="Responsive image" class="background-image5">
+        <img src="img/rose2.png" alt="Responsive image" class="background-image6">
+        <div class="container">
+            <h2 class="section-title text-center">Kontakt</h2>
+            <div class="divider"></div>
+            <p class="text-center font-some">W razie jakichkolwiek wątpliwości, bądź pytań proszę skontaktuje się z Nami :)</p>
+            <div class="row font-some text-center">
+                <div class="col-12 col-lg-8 offset-lg-2">
+                    <div class="my-4 rounded my-img"></div>
+                </div>
+                <div class="col-6 text-end">
+                    <h3>Kornelia Nalepa</h3>
+                    <p class="pb-0 mb-0 mt-4">Numer telefonu:</p>
+                    <a href="tel: 796697293" class="web-page-link">796 697 293</a>
+                </div>
+                <div class="col-6 text-start">
+                    <h3>Marcin Cyc</h3>
+                    <p class="pb-0 mb-0 mt-4">Numer telefonu:</p>
+                    <a href="tel: 793607234" class="web-page-link">793 607 234</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-5 bg-light" style="background: url('pattern.avif') no-repeat center center/cover;">
+        <div class="container">
+            <h2 class="section-title text-center">FAQs</h2>
+            <div class="divider"></div>
+            <div class="row justify-content-center mt-4 font-some">
+                <div class="accordion col-md-8 offset-md-2" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          Pytanie #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Pytanie #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Pytanie #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-2 text-center font-some">
+        <p>&copy; 2025 Kornelia & Marcin. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var element = document.getElementById('ID1');
+            if (window.scrollY >= 928) {
+                element.classList.remove('top');
+                element.classList.add('scrolled');
+            } else {
+                element.classList.remove('scrolled');
+                element.classList.add('top');
+            }
+        });
+        window.addEventListener('load', function() {
+            var element = document.getElementById('ID1');
+            if (window.scrollY >= 928) {
+                element.classList.remove('top');
+                element.classList.add('scrolled');
+            } else {
+                element.classList.remove('scrolled');
+                element.classList.add('top');
+            }
+        });
+
+        // Countdown Timer Script
+        const weddingDate = new Date('May 29, 2026 15:00:00').getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
