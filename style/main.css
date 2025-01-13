@@ -1,0 +1,175 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+}
+header {
+    position: relative;
+    background: url('../img/dlonie.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+header .container {
+    position: relative;
+    z-index: 2;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+header p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.divider {
+    width: 100px;
+    height: 3px;
+    background-color: #333;
+    margin: 0.5rem auto;
+}
+.playfair-display-italic {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+.gallery img {
+    border-radius: 8px;
+}
+.great-vibes-normal {
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.scrolled {
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+}
+.top {
+    background-color: transparent;
+    background: rgba(0, 0, 0, 0.0);
+}
+.nav-link {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-weight: 200;
+    font-style: italic;
+}
+.custom-nav-submenu {
+    border: none;
+}
+.timeline-bg {
+    background: rgba(236, 236, 236, 0.9);
+}
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    text-align: start;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+.gray-img {
+    filter: grayscale(100%) contrast(150%);
+}
+.height-35 {
+    height: 35vh;
+    max-height: 35vh;
+    display: flex;
+}
+/* Rose styles */
+.rose-common {
+    position: absolute;
+    z-index: -10; /* Push the image behind */
+    object-fit: cover; /* Ensure the image covers the background area */
+    opacity: 0.7;
+}
+.rose-left {
+    left: 0px;
+}
+.rose-right {
+    right: 0px;
+}
+.content-timeline {
+    position: relative;
+    z-index: 2;
+}
+.test {
+    position: relative;
+    z-index: 2;
+}
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: rgb(29, 29, 29);
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+.accordion {
+    --bs-accordion-btn-focus-border-color: transparent;
+    --bs-accordion-btn-focus-box-shadow: transparent;
+}
+.web-page-link {
+    text-decoration: underline;
+    color: black;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.my-img{
+    position:relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/selfie_bg.jpg');
+}
+.hide-item {
+    display: none;
+}
+
+.transparent-bg {
+    /* background: rgba(0, 0, 0, 0.05); */
+    border-radius: 30px;
+    /* border: 2px solid rgba(0, 0, 0, 0.2); */
+}
